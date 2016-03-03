@@ -1,4 +1,5 @@
 """ Created by wu.jieyi on 2016/02/09. """
+import sys
 
 """
 ** Testing case **
@@ -14,22 +15,20 @@ Sample Output
 *DEC is the trademark of the Digital Equipment Corporation.
 """
 
-import sys
-
 
 def decoder(enc_str):
-	decode = 7
-	for c in enc_str:
-		print() if c == '\n' else print(chr(ord(c) - decode), end='')
+    decode = 7
+    for c in enc_str:
+        print() if c == '\n' else print(chr(ord(c) - decode), end='')
 
 
 def main():
-	for inp in sys.stdin:
-		if inp == '\n':
-			print()
-		else:
-			decoder(inp)
+    for inp in sys.stdin:
+        if inp == '\n':
+            print()
+        else:
+            decoder(inp)
 
 
 if __name__ == '__main__':
-	main()
+    main()
